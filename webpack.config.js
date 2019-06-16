@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin/lib/index');
+const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 
 module.exports = {
   mode: 'development',
@@ -84,6 +85,9 @@ module.exports = {
     }),
     new ForkTsCheckerWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
+    new InterpolateHtmlPlugin(HtmlWebPackPlugin, {
+      PUBLIC_URL: ''
+    })
   ],
 };
