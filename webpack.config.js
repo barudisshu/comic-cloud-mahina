@@ -53,12 +53,25 @@ module.exports = {
       {
         test: /\.less$/,
         exclude: /(node_modules)/,
-        loader: 'style-loader!css-loader?importLoaders=1!less-loader',
-      },
-      {
-        test: /\.scss$/,
-        exclude: /(node_modules)/,
-        loader: 'style-loader!css-loader?importLoaders=2!postcss-loader!sass-loader',
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'less-loader',
+            options: {
+              modifyVars: {
+                'primary-color': '#1DA57A',
+                'link-color': '#1DA57A',
+                'border-radius-base': '2px'
+              },
+              javascriptEnabled: true
+            }
+          }
+        ]
       },
       {
         test: /\.css$/,
@@ -84,7 +97,6 @@ module.exports = {
       filename: './index.html'
     }),
     new ForkTsCheckerWebpackPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new InterpolateHtmlPlugin(HtmlWebPackPlugin, {
       PUBLIC_URL: ''

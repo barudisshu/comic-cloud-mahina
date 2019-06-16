@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import './index.less';
 import { hot } from 'react-hot-loader';
 
 export default hot(module)(App);
