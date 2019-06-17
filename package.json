@@ -1,5 +1,5 @@
 {
-  "name": "comic-cloud-apolo",
+  "name": "comic-cloud-mahina",
   "version": "0.1.0",
   "author": "Galudisu@gmail.com",
   "license": "MIT",
@@ -14,11 +14,13 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "redux": "^4.0.1",
     "typescript": "3.5.2"
   },
   "devDependencies": {
+    "@ant-design/pro-layout": "^4.5.5",
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
@@ -32,6 +34,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-stage-3": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
+    "@types/react-router-dom": "^4.3.4",
     "antd": "^3.19.3",
     "autoprefixer": "^9.6.0",
     "awesome-typescript-loader": "^5.0.0",
@@ -49,9 +52,12 @@
     "css-loader": "^3.0.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^5.0.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.12.3",
+    "express": "^4.17.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^4.0.0",
     "fork-ts-checker-webpack-plugin": "^1.3.7",
@@ -60,10 +66,13 @@
     "jest": "^24.8.0",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
+    "mockjs": "^1.0.1-beta3",
+    "moment": "^2.24.0",
     "prettier": "^1.13.7",
     "prettier-stylelint": "^0.4.2",
     "promise": "^8.0.3",
     "react-dev-utils": "^9.0.1",
+    "react-document-title": "^2.0.3",
     "react-hot-loader": "^4.6.3",
     "react-router-dom": "^5.0.1",
     "react-test-renderer": "^16.7.0",
@@ -74,6 +83,7 @@
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^3.0.0",
+    "stylelint-scss": "^3.8.0",
     "terser-webpack-plugin": "^1.3.0",
     "transfer-webpack-plugin": "^0.1.4",
     "ts-import-plugin": "^1.5.5",
@@ -100,7 +110,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/barudisshu/comic-cloud-apolo.git"
+    "url": "https://github.com/barudisshu/comic-cloud-mahina.git"
   },
   "eslintConfig": {
     "extends": "react-app"
