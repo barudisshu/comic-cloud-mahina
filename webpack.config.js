@@ -32,7 +32,7 @@ module.exports = {
       '.json',
       '.web.jsx',
       '.jsx',
-    ]
+    ],
   },
   module: {
     rules: [
@@ -55,10 +55,10 @@ module.exports = {
         exclude: /(node_modules)/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-loader',
           },
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
           },
           {
             loader: 'less-loader',
@@ -66,12 +66,12 @@ module.exports = {
               modifyVars: {
                 'primary-color': '#1DA57A',
                 'link-color': '#1DA57A',
-                'border-radius-base': '2px'
+                'border-radius-base': '2px',
               },
-              javascriptEnabled: true
-            }
-          }
-        ]
+              javascriptEnabled: true,
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
@@ -94,12 +94,12 @@ module.exports = {
     new HtmlWebPackPlugin({
       inject: true,
       template: path.resolve(__dirname, './public', 'index.html'),
-      filename: './index.html'
+      filename: './index.html',
     }),
     new ForkTsCheckerWebpackPlugin(),
     new webpack.NamedModulesPlugin(),
     new InterpolateHtmlPlugin(HtmlWebPackPlugin, {
-      PUBLIC_URL: ''
-    })
+      PUBLIC_URL: '',
+    }),
   ],
 };
